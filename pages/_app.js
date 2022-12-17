@@ -1,5 +1,14 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import{Provider, createClient} from "urql";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+const client= createClient({url: "http://localhost:1337/graphql"}); //backend api
+
+function App({ Component, pageProps }) {
+  return(
+    <Provider value={client}>
+      <Component {...pageProps} />
+    </Provider>
+  )
 }
+
+export default App;
