@@ -16,6 +16,10 @@ export const ProductCard = styled.div`
         color: black;
         padding: 10px 10px;
     }
+
+    :hover{
+        border: 1px solid black;
+    }
 `;
 
 
