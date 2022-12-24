@@ -7,7 +7,7 @@ import Cart from './Cart';
 import { useStateContext } from '../lib/Context';
 
 export default function Nav() {
-    const {showCart, setShowCart} = useStateContext();
+    const {showCart, setShowCart, totalQuantities} = useStateContext();
     return (
         <Navbar>
             <Link href={'/'}>
@@ -17,8 +17,9 @@ export default function Nav() {
                 </Logo>
             </Link>
             <CartIcon onClick={()=> setShowCart(true)}>
+                { totalQuantities > 0 && <span>{totalQuantities}</span>}
                 <FaShoppingCart/> 
-                Cart
+                <h4>Cart</h4>
             </CartIcon>
             {showCart && <Cart/>}
         </Navbar>

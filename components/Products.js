@@ -9,7 +9,7 @@ export default function Products({product}){
                 <img src={image.data.attributes.formats.small.url}></img>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <b>{price} - Euro</b>
+                <b>{price} €</b>
             </ProductCard>
         </Link>
     )

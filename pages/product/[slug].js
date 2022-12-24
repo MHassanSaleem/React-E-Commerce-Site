@@ -9,8 +9,6 @@ import { useStateContext } from '../../lib/Context'
 export default function ProductDetails(){
     //using data from states in context
     const {quantity, increaseQuantity, decreaseQuantity, showCart, cartItems, setcartItems, onAdd} = useStateContext();
-
-    console.log('here '+quantity);
     //fetching slug
     const {query} = useRouter();
     //fetching data GraphQL
