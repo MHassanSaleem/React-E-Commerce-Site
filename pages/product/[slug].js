@@ -3,7 +3,6 @@ import { useQuery } from "urql";
 import { GET_PRODUCT_QUERY } from "../../lib/query";
 import { DetailPage, ProductInfo, QuantityButtons, CartButton, Price } from "../../styles/DetailPage";
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai'
-import { useContext } from "react";
 import { useStateContext } from '../../lib/Context'
 
 export default function ProductDetails(){
@@ -30,7 +29,8 @@ export default function ProductDetails(){
                 <p>{description}</p>
                 <Price>{price} €</Price>
                 <QuantityButtons>
-                    <span>Quantity </span> <AiFillMinusCircle onClick={decreaseQuantity}/><p>{quantity}</p><AiFillPlusCircle onClick={increaseQuantity}/>
+                    <span>Quantity </span>
+                    <AiFillMinusCircle onClick={decreaseQuantity}/><p>{quantity}</p><AiFillPlusCircle onClick={increaseQuantity}/>
                 </QuantityButtons>
                 <CartButton onClick={()=>{onAdd(data.products.data[0].attributes,quantity)}}><AiFillPlusCircle/> Add to cart</CartButton>
             </ProductInfo>

@@ -6,6 +6,8 @@ import Link from 'next/link';
 import Cart from './Cart';
 import { useStateContext } from '../lib/Context';
 
+const { AnimatePresence, motion } = require("framer-motion");
+
 export default function Nav() {
     const {showCart, setShowCart, totalQuantities} = useStateContext();
     return (
@@ -17,11 +19,11 @@ export default function Nav() {
                 </Logo>
             </Link>
             <CartIcon onClick={()=> setShowCart(true)}>
-                { totalQuantities > 0 && <span>{totalQuantities}</span>}
+                { totalQuantities > 0 && <motion.span initial={{opacity: 0, scale: 0.5}} animate={{opacity: 1, scale: 1}}>{totalQuantities}</motion.span>}
                 <FaShoppingCart/> 
                 <h4>Cart</h4>
             </CartIcon>
-            {showCart && <Cart/>}
+            <AnimatePresence>{showCart && <Cart/>}</AnimatePresence>
         </Navbar>
     );
 }

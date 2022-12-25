@@ -1,5 +1,22 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## About Project
+
+It is an E-commerce Website for paintings
+
+it used following packages/libraries:
+react-icons,
+framer-motion,
+styled-components
+stripe @stripe/stripe-js @stripe/react-stripe-js
+
+for backend: 
+Strapi
+
+for payments
+Stripe
+
+
 ## Getting Started
 
 First, run the development server:

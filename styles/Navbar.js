@@ -25,6 +25,7 @@ export const CartIcon = styled.div`
     align-items: center;
     padding: 20px 40px;
     span{
+        cursor: pointer;
         background-color: #d61f1f;
         width: 1.2rem;
         height: 1.2rem;
