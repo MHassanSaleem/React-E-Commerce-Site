@@ -45,3 +45,9 @@ export const CartIcon = styled.div`
         font-size: 1rem;
     }
 `;
+
+export const NavItems = styled.div`
+    display: flex;
+
+`;
+

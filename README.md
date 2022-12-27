@@ -10,6 +10,9 @@ framer-motion,
 styled-components
 stripe @stripe/stripe-js @stripe/react-stripe-js
 
+## for authentication
+npm install @auth0/nextjs-auth0  and follow site Auth0.com
+
 for backend: 
 Strapi
 
