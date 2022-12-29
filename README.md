@@ -9,6 +9,7 @@ react-icons,
 framer-motion,
 styled-components
 stripe @stripe/stripe-js @stripe/react-stripe-js
+react-hot-toast
 
 ## for authentication
 npm install @auth0/nextjs-auth0  and follow site Auth0.com

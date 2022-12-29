@@ -1,8 +1,6 @@
 import { useRouter } from "next/router";
 import { AiOutlineFileDone } from "react-icons/ai";
-import { GiPaintedPottery } from "react-icons/gi";
-import { SuccessWrapper, Card, OrderInfo, InfoWrapper, Product } from "../styles/Success";
-import { Logo } from '../styles/Navbar'
+import { Card, OrderInfo, InfoWrapper, Product } from "../styles/Success";
 
 const stripe = require('stripe')(`${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`);
 

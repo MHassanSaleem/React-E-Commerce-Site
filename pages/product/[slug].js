@@ -4,10 +4,18 @@ import { GET_PRODUCT_QUERY } from "../../lib/query";
 import { DetailPage, ProductInfo, QuantityButtons, CartButton, Price } from "../../styles/DetailPage";
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai'
 import { useStateContext } from '../../lib/Context'
+import { toast } from "react-hot-toast";
+import { useEffect } from "react";
 
 export default function ProductDetails(){
     //using data from states in context
-    const {quantity, increaseQuantity, decreaseQuantity, showCart, cartItems, setcartItems, onAdd} = useStateContext();
+    const {quantity, increaseQuantity, decreaseQuantity,onAdd, setQuantity} = useStateContext();
+
+    //reset quantity
+    useEffect(()=>{
+        setQuantity(1);
+    }, []);
+
     //fetching slug
     const {query} = useRouter();
     //fetching data GraphQL
@@ -21,6 +29,10 @@ export default function ProductDetails(){
 
     const{title, description, image, price} = data.products.data[0].attributes;
 
+    const notify = () => {
+        toast.success("Added to cart", {duration: 1000});
+    }
+
     return(
         <DetailPage>
             <img src={image.data.attributes.formats.small.url}/>
@@ -32,7 +44,10 @@ export default function ProductDetails(){
                     <span>Quantity </span>
                     <AiFillMinusCircle onClick={decreaseQuantity}/><p>{quantity}</p><AiFillPlusCircle onClick={increaseQuantity}/>
                 </QuantityButtons>
-                <CartButton onClick={()=>{onAdd(data.products.data[0].attributes,quantity)}}><AiFillPlusCircle/> Add to cart</CartButton>
+                <CartButton onClick={()=>{
+                    onAdd(data.products.data[0].attributes,quantity);
+                    notify();
+                    }}><AiFillPlusCircle/> Add to cart</CartButton>
             </ProductInfo>
         </DetailPage>
     )

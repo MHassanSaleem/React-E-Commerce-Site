@@ -48,6 +48,5 @@ export const CartIcon = styled.div`
 
 export const NavItems = styled.div`
     display: flex;
-
 `;
 
