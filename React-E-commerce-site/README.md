@@ -2,14 +2,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## About Project
 
-It is an E-commerce Website for paintings
+This is the frontend of an E-commerce painting store built with React. It offers a visually appealing user experience using styled-components for styling, framer-motion for sleek animations, and react-icons for a modern UI. Stripe integration enables secure payments via @stripe/react-stripe-js and @stripe/stripe-js. Toast notifications are handled with react-hot-toast for better user feedback.
 
-it used following packages/libraries:
-react-icons,
-framer-motion,
-styled-components
-stripe @stripe/stripe-js @stripe/react-stripe-js
-react-hot-toast
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Styled Components](https://img.shields.io/badge/Styled--Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer--Motion-000000?style=for-the-badge&logo=framer&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)
+![React Hot Toast](https://img.shields.io/badge/React--Hot--Toast-FF5733?style=for-the-badge)
 
 ## for authentication
 npm install @auth0/nextjs-auth0  and follow site Auth0.com
